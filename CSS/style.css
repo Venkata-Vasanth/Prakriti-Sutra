@@ -1,0 +1,612 @@
+/* ------------------------------------------- */
+/* 1. Global Reset & Utilities */
+/* ------------------------------------------- */
+:root {
+    --color-primary: #34495e; /* Dark Blue/Navy for text/primary elements */
+    --color-accent: #1abc9c;  /* Teal/Mint for CTAs and highlights */
+    --color-secondary: #2c3e50; /* Slightly lighter Navy for headers */
+    --color-background: #ecf0f1; /* Light Gray for main background */
+    --color-white: #ffffff;
+    --color-light-gray: #f7f9fb;
+    --color-border: #dcdcdc;
+    
+    --font-stack: 'Arial', sans-serif;
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ------------------------------------------- */
+/* 2. Navigation Bar (Used on ALL pages) */
+/* ------------------------------------------- */
+.navbar {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-light);
+}
+
+.navbar h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* ------------------------------------------- */
+/* 3. Button Styling (Global) */
+/* ------------------------------------------- */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s, opacity 0.2s;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #16a085; /* Darker accent */
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-light-gray);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.btn:disabled {
+    background-color: #bdc3c7 !important;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* ------------------------------------------- */
+/* 4. Landing Page (index.html) */
+/* ------------------------------------------- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    padding: 80px 5%;
+    background-color: var(--color-white);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cta-group {
+    margin-top: 20px;
+}
+
+.features-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--color-light-gray);
+}
+
+.features-section h2 {
+    color: var(--color-accent);
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    flex: 1;
+}
+
+.feature-item h3 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-size: 0.9em;
+}
+
+/* ------------------------------------------- */
+/* 5. Authentication Page (auth.html) */
+/* ------------------------------------------- */
+.auth-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 15px 0;
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+.tab-button.active {
+    border-bottom: 3px solid var(--color-accent);
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-secondary);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* ------------------------------------------- */
+/* 6. Quiz Page (quiz.html) */
+/* ------------------------------------------- */
+.main-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--color-white);
+    box-shadow: var(--shadow-medium);
+    border-radius: 8px;
+}
+
+.main-container h1 {
+    text-align: center;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+.quiz-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.question-card {
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-light-gray);
+}
+
+.question-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: var(--color-secondary);
+}
+
+/* Option Styling */
+.option-label {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    background-color: var(--color-white);
+}
+
+.option-label:hover {
+    background-color: #e8f6f3; /* Lighter accent background */
+    border-color: var(--color-accent);
+}
+
+.option-label input[type="radio"] {
+    margin-right: 15px;
+    accent-color: var(--color-accent);
+    transform: scale(1.2); /* Make radio button slightly larger */
+}
+
+/* Visually highlight the selected option */
+.option-label input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+/* ------------------------------------------- */
+/* 7. Dashboard Page (dashboard.html) */
+/* ------------------------------------------- */
+.dashboard {
+    text-align: center;
+}
+
+#welcome-message {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+}
+
+.result-card {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-medium);
+}
+
+.result-card h2 {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.dosha-display {
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+#dominant-dosha {
+    font-size: 3em;
+    font-weight: 700;
+    color: #f1c40f; /* Gold/Yellow highlight for the Dosha name */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+    /* Ensure the text scales slightly better on tiny screens */
+    word-break: break-word; 
+    overflow-wrap: break-word;
+}
+
+.summary-text {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.recommendations-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+.recommendation-content {
+    display: flex;
+    /* KEY CHANGE: Allows categories to wrap on small screens */
+    flex-wrap: wrap; 
+    gap: 20px;
+    text-align: left;
+}
+
+.recommendation-category {
+    /* KEY CHANGE: Allows categories to grow on desktop, but forces full width on mobile */
+    flex: 1 1 300px; 
+    background: var(--color-light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.recommendation-category h3 {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.recommendation-category ul {
+    list-style-type: '• '; /* Use a cleaner bullet point */
+    padding-left: 20px;
+}
+
+.recommendation-category li {
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+/* Ensure the recommendation sections stack neatly on small screens */
+@media (max-width: 768px) {
+    .recommendation-content {
+        flex-direction: column;
+    }
+    .recommendation-category {
+        /* Forces full width on mobile devices */
+        flex-basis: 100%; 
+    }
+    
+    .result-card {
+        padding: 20px;
+    }
+    
+    #dominant-dosha {
+        font-size: 2.5em; /* Slightly smaller on mobile */
+    }
+}
+
+/* ------------------------------------------- */
+/* 8. Media Queries (Responsiveness) */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .feature-grid,
+    .recommendation-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .auth-container {
+        margin: 30px auto;
+    }
+}
+
+/* --- AI Chat Feature Styling --- */
+
+/* ------------------------------------------- */
+/* Chat Toggle Button Styling */
+/* ------------------------------------------- */
+
+.chat-toggle-btn {
+  width: 60px;                  /* Circle size */
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: none;
+  display: flex;                /* Center image */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;                   /* No default padding */
+}
+
+.chat-toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.chat-toggle-btn img {
+  width: 65%;                   /* Fits nicely inside circle */
+  height: 65%;
+  object-fit: contain;          /* Keeps correct proportions */
+  pointer-events: none;         /* So clicks register on the button */
+}
+
+/* Optional: fixed position like a floating chat button */
+#chat-toggle-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+}
+
+/* Chat Window Container */
+.ai-chat-window {
+    position: fixed;
+    bottom: 90px; /* Positions it just above the button (60px height + 10px margin) */
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Chat Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.chat-close-btn {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.5em;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.chat-close-btn:hover {
+    opacity: 1;
+}
+
+/* Messages Area */
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: var(--color-light-gray);
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.system-message, .message.ai {
+    background-color: #e8f6f3; /* Light accent background */
+    margin-right: auto;
+}
+
+.message.user {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    margin-left: auto;
+}
+
+/* Input Area */
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid var(--color-border);
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+#chat-send-btn {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#chat-send-btn:hover {
+    background-color: #16a085;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    font-style: italic;
+    opacity: 0.6;
+}

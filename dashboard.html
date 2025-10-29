@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Your Wellness Plan</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/data.js"></script> 
+</head>
+<body>
+    
+    <header class="navbar">
+        <div class="logo">
+            <h2>Prakriti Sutra Wellness Portal</h2>
+        </div>
+        <nav class="nav-links">
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+    </header>
+
+    <div class="main-container dashboard">
+        
+        <h1 id="welcome-message">Hello, Wellness Seeker!</h1>
+
+        <section class="result-card">
+            <h2>Your Dominant Dosha is:</h2>
+            <div class="dosha-display">
+                <span id="dominant-dosha" class="dosha-name">Loading...</span>
+            </div>
+            <p class="summary-text" id="dosha-summary">Your personalized blueprint is being retrieved.</p>
+        </section>
+
+        <section class="recommendations-section">
+            <h2>Personalized Path to Balance</h2>
+            <div class="recommendation-content">
+                
+                <div class="recommendation-category">
+                    <h3>Dietary Advice</h3>
+                    <ul id="diet-recommendations">
+                        <li>Loading...</li>
+                    </ul>
+                </div>
+                
+                <div class="recommendation-category">
+                    <h3>Lifestyle & Routine</h3>
+                    <ul id="lifestyle-recommendations">
+                        <li>Loading...</li>
+                    </ul>
+                </div>
+                
+                <div class="recommendation-category">
+                    <h3>Stress Management</h3>
+                    <ul id="stress-recommendations">
+                        <li>Loading...</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+
+        <div class="cta-group">
+            <a href="quiz.html" class="btn btn-primary">Retake Dosha Quiz</a>
+        </div>
+
+    </div>
+    
+    <button id="chat-toggle-btn" class="chat-toggle-btn">
+        <img src="Assets/Images/chat_bot_icons.png">
+    </button>
+
+    <div id="ai-chat-window" class="ai-chat-window hidden">
+        <div class="chat-header">
+            <h4>Sattva Guide AI Assistant</h4>
+            <button id="chat-close-btn" class="chat-close-btn">&times;</button>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <div class="message system-message">
+                Hi! I'm your Wellness Assistant. Ask me anything about Doshas, balance, or Ayurvedic practices!
+            </div>
+            </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off">
+            <button id="chat-send-btn">Send</button>
+        </div>
+    </div>
+    
+    <script src="JS/script.js"></script>
+</body>
+</html>

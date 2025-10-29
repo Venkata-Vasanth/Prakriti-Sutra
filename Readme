@@ -1,0 +1,60 @@
+Prakriti Sutra: Personalized Ayurvedic Wellness Portal
+
+🌟 Project Overview
+
+Prakriti Sutra (The Principles of Your Constitution) is a modern web application designed for college wellness initiatives to help users discover their unique Dosha (body constitution, or Prakriti). It provides a full user journey, from initial sign-up to personalized daily recommendations and real-time AI guidance.
+
+The application is built using a pure JavaScript (Frontend-Only) architecture for rapid deployment and ease of demonstration, leveraging local browser storage for session management and relying on the Google Gemini API for its intelligent assistant.
+
+✨ Key Features
+
+Guided Onboarding: Simulates a user flow with a Landing Page and an Authentication screen (Sign Up/In).
+
+Dosha Quiz (The Core): A structured 12-question quiz based on Ayurvedic principles to determine the user's dominant Dosha (Vata, Pitta, or Kapha).
+
+Personalized Dashboard: Displays the user's calculated Dosha, along with tailored recommendations for Diet, Lifestyle, and Stress Management. Markdown formatting is rendered correctly for emphasis.
+
+Sattva Guide (AI Assistant): A persistent, floating chat widget powered by the Gemini API. The assistant is context-aware, receiving the user's specific Dosha result to provide personalized, real-time wellness advice.
+
+📁 File Structure
+
+The project uses a standard, lightweight directory structure:
+
+Prakriti Sutra/
+├── css/
+│   └── style.css           # Calming, responsive theme (no card layout)
+├── js/
+│   ├── data.js             # Static Dosha profiles and recommendation data
+│   └── script.js           # All application logic (Auth, Quiz, Dashboard, AI Chat)
+├── Dosha_quiz.json         # All quiz questions and scoring data
+├── index.html              # Landing Page
+├── auth.html               # Sign In / Sign Up Simulation
+├── quiz.html               # Dosha Assessment Quiz
+└── dashboard.html          # Personalized Results and AI Chat Hub
+
+
+🚀 Installation
+
+Since this project is built entirely using standard HTML, CSS, and JavaScript, no complex server environment is required.
+
+Clone the Repository:
+
+git clone [Your-GitHub-Repository-URL]
+cd Prakriti-Sutra
+
+
+Open in Browser: Open the index.html file directly in any modern web browser.
+
+🏃 How to Run the Project
+
+Start: Open index.html.
+
+Sign Up: Click "Start My Wellness Check" and sign up with a dummy name/email on auth.html.
+
+Take the Quiz: Complete all 12 questions on quiz.html.
+
+View Dashboard: The app redirects to dashboard.html, showing personalized results.
+
+Engage the AI: Click the floating circular Sattva Guide button on the bottom-right of the dashboard to start a real-time conversation.
+
+Note on AI Security: The AI chat feature uses the Gemini API. This application relies on the secure runtime environment to handle API key injection. No sensitive keys are exposed in the client-side code.

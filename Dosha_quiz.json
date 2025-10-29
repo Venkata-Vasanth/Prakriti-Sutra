@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "category": "Physical Traits",
+    "question": "1. What is your typical skin type?",
+    "options": [
+      {"text": "A. Dry, thin, tends to be cool, or rough.", "dosha": "Vata"},
+      {"text": "B. Oily, warm, prone to rashes or acne.", "dosha": "Pitta"},
+      {"text": "C. Thick, smooth, oily, or cool.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Physical Traits",
+    "question": "2. What is your natural body build?",
+    "options": [
+      {"text": "A. Naturally thin, light frame, finds it hard to gain weight.", "dosha": "Vata"},
+      {"text": "B. Medium build, muscular, athletic, medium frame.", "dosha": "Pitta"},
+      {"text": "C. Heavier build, solid, tends to gain weight easily.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Physical Traits",
+    "question": "3. Describe your hair.",
+    "options": [
+      {"text": "A. Dry, thin, tends to be coarse or frizzy.", "dosha": "Vata"},
+      {"text": "B. Oily, fine, light in color, or may thin early.", "dosha": "Pitta"},
+      {"text": "C. Thick, full, wavy, or oily.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Physical Traits",
+    "question": "4. Describe your eyes.",
+    "options": [
+      {"text": "A. Small, dry, or restless.", "dosha": "Vata"},
+      {"text": "B. Medium, intense, sharp, or piercing.", "dosha": "Pitta"},
+      {"text": "C. Large, attractive, calm, or deep-set.", "dosha": "Kapha"}
+    ]
+  },
+
+  {
+    "id": 5,
+    "category": "Mental & Emotional Traits",
+    "question": "5. What best describes your general mindset?",
+    "options": [
+      {"text": "A. Restless, active, and creative; tends to worry.", "dosha": "Vata"},
+      {"text": "B. Focused, sharp, ambitious; good at organizing.", "dosha": "Pitta"},
+      {"text": "C. Calm, steady, and relaxed; slow to anger.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Mental & Emotional Traits",
+    "question": "6. How is your memory?",
+    "options": [
+      {"text": "A. Quick to learn, but also quick to forget.", "dosha": "Vata"},
+      {"text": "B. Sharp and accurate; excellent memory.", "dosha": "Pitta"},
+      {"text": "C. Slow to learn, but once learned, rarely forgotten.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Mental & Emotional Traits",
+    "question": "7. What emotion are you most prone to?",
+    "options": [
+      {"text": "A. Anxiety, fear, or insecurity.", "dosha": "Vata"},
+      {"text": "B. Anger, impatience, or irritability.", "dosha": "Pitta"},
+      {"text": "C. Attachment, contentment, or emotional slowness.", "dosha": "Kapha"}
+    ]
+  },
+
+  {
+    "id": 8,
+    "category": "Daily Habits and Preferences",
+    "question": "8. What is your preferred diet?",
+    "options": [
+      {"text": "A. Prefer hot, sweet, or spicy foods; irregular appetite.", "dosha": "Vata"},
+      {"text": "B. Prefer cool foods; moderate and strong appetite.", "dosha": "Pitta"},
+      {"text": "C. Prefer spicy, bitter, or dry foods; strong, steady appetite.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Daily Habits and Preferences",
+    "question": "9. Describe your sleep.",
+    "options": [
+      {"text": "A. Light, often restless, or have trouble staying asleep.", "dosha": "Vata"},
+      {"text": "B. Deep, but moderate in duration; can sleep well.", "dosha": "Pitta"},
+      {"text": "C. Deep, long, and heavy; wake up slowly.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Daily Habits and Preferences",
+    "question": "10. Describe your energy levels.",
+    "options": [
+      {"text": "A. Energetic bursts, but tires quickly; variable.", "dosha": "Vata"},
+      {"text": "B. High, focused, and consistent energy; energetic.", "dosha": "Pitta"},
+      {"text": "C. Steady and enduring energy; tends to be slow-moving.", "dosha": "Kapha"}
+    ]
+  },
+
+  {
+    "id": 11,
+    "category": "Environmental Reactions",
+    "question": "11. What weather do you prefer?",
+    "options": [
+      {"text": "A. Prefers warmth; dislikes cold, dry, or windy weather.", "dosha": "Vata"},
+      {"text": "B. Prefers cool climates; dislikes hot, humid weather.", "dosha": "Pitta"},
+      {"text": "C. Prefers warmth and dryness; dislikes cold, damp, or wet weather.", "dosha": "Kapha"}
+    ]
+  },
+  {
+    "id": 12,
+    "category": "Environmental Reactions",
+    "question": "12. How do you respond to stress?",
+    "options": [
+      {"text": "A. Become anxious, fearful, or withdraw.", "dosha": "Vata"},
+      {"text": "B. Become intense, angry, or critical of others.", "dosha": "Pitta"},
+      {"text": "C. Become lethargic, avoid confrontation, or overeat.", "dosha": "Kapha"}
+    ]
+  }
+]
